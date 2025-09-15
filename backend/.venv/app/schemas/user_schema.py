@@ -11,6 +11,7 @@ class UserResponse(BaseModel):
     username: str
     email: EmailStr
     created_at: datetime
+    points: int 
 
     class Config:
         orm_mode = True

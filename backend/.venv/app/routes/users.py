@@ -13,3 +13,7 @@ def register_user(user: user_schema.UserCreate, db: Session = Depends(get_db)):
 @router.get("/", response_model=list[user_schema.UserResponse])
 def get_all_users(db: Session = Depends(get_db)):
     return user_service.get_users(db)
+
+@router.get("/leaderboard", response_model=list[user_schema.UserResponse])
+def get_leaderboard(db: Session = Depends(get_db)):
+    return user_service.get_leaderboard(db)

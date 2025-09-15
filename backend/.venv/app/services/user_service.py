@@ -18,3 +18,7 @@ def create_user(db: Session, user: schemas.user_schema.UserCreate):
 
 def get_users(db: Session):
     return db.query(models.user.User).all()
+
+def get_leaderboard(db: Session, limit: int = 10):
+    """Returns users sorted by points for the leaderboard."""
+    return db.query(models.user.User).order_by(models.user.User.points.desc()).limit(limit).all()

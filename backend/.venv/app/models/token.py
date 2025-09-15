@@ -3,10 +3,11 @@ from datetime import datetime
 from app.utils.db import Base
 
 class TokenLog(Base):
-    _tablename_ = "token_logs"
+    __tablename__ = "token_logs"
 
     id = Column(Integer, primary_key=True, index=True)
     token_type = Column(String(50))
     triggered_by_ip = Column(String(50))
     context = Column(String(255))
+    user_context = Column(String(255)) 
     timestamp = Column(DateTime, default=datetime.utcnow)
