@@ -6,7 +6,7 @@ class TokenLogCreate(BaseModel):
     token_type: str
     triggered_by_ip: str
     context: str
-    user_context: Optional[str] = None # Added Optional field
+    user_context: Optional[str] = None 
 
 class TokenLogResponse(TokenLogCreate):
     id: int
