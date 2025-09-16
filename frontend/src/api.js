@@ -1,0 +1,7 @@
+export async function fetchUsers() {
+  return [
+    { id: 1, name: "User A" },
+    { id: 2, name: "User B" },
+    { id: 3, name: "User C" },
+  ];
+}
