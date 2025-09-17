@@ -7,13 +7,14 @@ import Tokens from "./pages/Tokens";
 import Decoys from "./pages/Decoys";
 import Replay from "./pages/Replay";
 import Attribution from "./pages/Attribution";
+import "./index.css"; 
 
 export default function App() {
   return (
     <Router>
-      <div className="flex">
+      <div className="app-container">
         <Sidebar />
-        <div className="flex-1">
+        <div className="main-content">
           <Navbar />
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />

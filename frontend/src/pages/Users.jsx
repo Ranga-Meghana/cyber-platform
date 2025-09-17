@@ -2,9 +2,9 @@ import Card from "../components/Card";
 
 export default function Users() {
   return (
-    <div className="p-6">
+    <div className="page-container">
       <Card title="Users List">
-        <ul className="list-disc pl-5">
+        <ul className="list-disc">
           <li>User A</li>
           <li>User B</li>
           <li>User C</li>
